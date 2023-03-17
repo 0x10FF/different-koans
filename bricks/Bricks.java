@@ -17,16 +17,15 @@ public boolean makeBricks (int small, int big, int goal) {
 			lengthWithBig -= 5;
 		}
 		//pick smallest and decrement
-		while (goal >= 1 && lengthwithSmall != 0 && goal != 0) {
+		while (goal >= 1 && lengthWithSmall != 0 && goal != 0) {
 			goal -= 1;
-			lengthwithSmall -= 1;
+			lengthWithSmall -= 1;
 		}
 	
-		buildable = goal =- 0;
+		buildable = goal == 0;
 	} else if (max < goal) {
 		buildable = false;
 	}
 
 	return buildable;
 }
-
